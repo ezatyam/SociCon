@@ -5,7 +5,7 @@ export interface IEmployee {
   gender: string;
   phone: string;
   email: string;
-  eecurityQuestion: string;
+  SecurityQuestion: string;
   answer: string;
   password: string;
 }
