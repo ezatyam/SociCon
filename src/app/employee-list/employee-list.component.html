@@ -9,22 +9,16 @@
         LastName
       </th>
       <th>
-        Gender
+        userName
       </th>
       <th>
-        Phone
+        password
       </th>
       <th>
-        Email
+        phoneNumber
       </th>
       <th>
-        SecurityQuestion
-      </th>
-      <th>
-        Answer
-      </th>
-      <th>
-        Password
+        EmailId
       </th>
     </tr>
 
@@ -32,13 +26,11 @@
   <tr *ngFor="let Employee of employees;">
     <td>{{Employee.firstName}}</td>
     <td>{{Employee.lastName}}</td>
-    <td>{{Employee.gender}}</td>
-    <td>{{Employee.phone}}</td>
-    <td>{{Employee.email}}</td>
-
-    <td>{{Employee.securityQuestion}}</td>
-    <td>{{Employee.answer}}</td>
+    <td>{{Employee.userName}}</td>
     <td>{{Employee.password}}</td>
+    <td>{{Employee.phoneNumber}}</td>
+    <td>{{Employee.emailId}}</td>
+
   </tr>
   <!--<tr *ngIf="!employees || employees.length==0">
     <td>
