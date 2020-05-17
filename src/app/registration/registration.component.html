@@ -9,7 +9,7 @@
       <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
       <h3>Welcome</h3>
       <p>You are 30 seconds away from earning your own money!</p>
-      <input type="submit" name="" value="Login" /><br />
+      <input type="button"  routerLink="../login" name="" value="Login" /><br />
     </div>
     <div class="col-md-9 register-right">
       <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -29,17 +29,17 @@
                 <div class="form-group" [ngClass]="{'has-error' : registration.get('FirstName').errors}"  >
                   <input type="text" class="form-control" formControlName="FirstName" placeholder="First Name *" value=""   />
                 </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" formControlName="LastName" placeholder="Last Name *" value="" />
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('LastName').errors}">
+                  <input type="text" class="form-control"   formControlName="LastName" placeholder="Last Name *" value="" />
                 </div>
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('Password').errors}">
                   <input type="password" class="form-control" formControlName="Password" placeholder="Password *" value="" />
                 </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('Password').errors}">
+                  <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
                 </div>
-                <div class="form-group">
-                  <select class="form-control"  formControlName="Gender">
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('Gender').errors}">
+                  <select class="form-control" [ngClass]="{'has-error' : registration.get('Gender').errors}"  formControlName="Gender">
 
                     
                     <option selected>Select</option>
@@ -49,13 +49,13 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('Email').errors}">
                   <input type="email" class="form-control" formControlName="Email" placeholder="Your Email *" value="" />
                 </div>
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('Phone').errors}">
                   <input type="text" minlength="10" maxlength="10" formControlName="Phone" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
                 </div>
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('SecurityQuestion').errors}">
                   <select class="form-control" formControlName="SecurityQuestion">
                     <option>Please select your Sequrity Question</option>
                     <option>What is your Birthdate?</option>
@@ -63,11 +63,11 @@
                     <option>What is your Pet Name?</option>
                   </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : registration.get('Answer').errors}">
                   <input type="text" class="form-control" formControlName="Answer" placeholder="Enter Your Answer *" value="" />
                 </div>
                 <input type="submit" class="btnRegister" value="Register" />
-                <input type="button" class="btnLoadData" (click)="onLoadDataClick()" value="Load data" />
+                <!-- <input type="button" class="btnLoadData" (click)="onLoadDataClick()" value="Load data" /> -->
               </div>
             </div>
           </form>

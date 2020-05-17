@@ -23,13 +23,13 @@ export class RegistrationComponent implements OnInit {
     //})
     this.registration = this.fb.group({
       FirstName: ['', Validators.required],
-      LastName: [''],
-      Gender: [''],
-      Phone: [''],
-      Email: [''],
-      SecurityQuestion: [''],
-      Answer: [''],
-      Password: [''],
+      LastName: ['',Validators.required],
+      Gender: ['', Validators.required],
+      Phone: ['',Validators.required],
+      Email: ['',Validators.required],
+      SecurityQuestion: ['',Validators.required],
+      Answer: ['',Validators.required],
+      Password: ['',Validators.required],
     })
   }
 

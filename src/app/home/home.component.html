@@ -1,1 +1,59 @@
-<p>home works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Welcome</h3>
+      <p>You are 30 seconds away from earning your own money!</p>
+      <input type="button"  routerLink="../registration" name="" value="Register" /><br />
+    </div>
+    <div class="col-md-9 register-right">
+      
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h3 class="register-heading">Employee Profile </h3>
+          <form  (ngSubmit)="onsubmit()">
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group"  >
+                  <input type="text" class="form-control"  placeholder="First Name *" value="{{employees.firstName}}"   />
+                </div>
+                <div class="form-group" >
+                  <input type="text" class="form-control"    placeholder="Last Name *" value="{{employees.lastName}}" />
+                </div>
+                
+                <div class="form-group" >
+                  <input type="password" class="form-control" placeholder="Password *" value="{{employees.password}}" />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                </div>
+                
+              </div>
+              <div class="col-md-6">
+                <div class="form-group" >
+                  <input type="email" class="form-control" placeholder="Your Email *" value="{{employees.emailId}}" />
+                </div>
+                <div class="form-group" >
+                  <input type="text" minlength="10" maxlength="10" name="txtphoneNumber" class="form-control" placeholder="Your Phone *" value="{{employees.phoneNumber}}" />
+                </div>
+                
+                <div class="form-group" >
+                  <input type="text" class="form-control"  placeholder="Enter User Name *" value="{{employees.userName}}" />
+                </div>
+                <input type="submit" class="btnRegister" value="Save" />
+                <input type="button" class="btnRegister" value="back to list" routerLink="../EmployeeList" />
+                <!-- <input type="button" class="btnLoadData" (click)="onLoadDataClick()" value="Load data" /> -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

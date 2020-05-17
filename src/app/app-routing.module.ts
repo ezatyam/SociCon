@@ -6,7 +6,6 @@ import { RegistrationComponent } from './registration/registration.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-
 import {DashBoardComponent} from './dash-board/dash-board.component'
 
 const appRoutes: Routes = [
@@ -16,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'EmployeeList', component: EmployeeListComponent },
   { path: 'Home', component:HomeComponent },
+  
   
 ];
 @NgModule({

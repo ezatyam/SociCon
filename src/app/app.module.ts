@@ -7,10 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
-
 import { HomeComponent } from './home/home.component';
-
 import {DashBoardComponent} from './dash-board/dash-board.component'
+import { StorageServiceModule} from 'angular-webstorage-service';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import {DashBoardComponent} from './dash-board/dash-board.component'
     LoginComponent,    
     HomeComponent,
     DashBoardComponent,
+  
     
   ],
   imports: [
@@ -27,7 +28,8 @@ import {DashBoardComponent} from './dash-board/dash-board.component'
     AppRoutingModule,
     ReactiveFormsModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    StorageServiceModule
   ],
 
   providers: [],

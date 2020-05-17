@@ -73,3 +73,10 @@ body {
     background-color: #000 !important;
     color: #fff;
 }
+.has-error {
+    border:1px solid red;
+    color:red;
+    background-color:red;
+    outline-color:red;
+    
+  }

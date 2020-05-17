@@ -23,8 +23,17 @@ export class RegistrationService {
     //]
   }
 
-  CheckRegistration(emp:string):Observable <Employee>  {
-    return this._http.get("https://localhost:5001/api/Registration/"+emp)
+  CheckRegistration(userName:string,pass:string):Observable <Employee>  {
+    return  this._http.get("https://localhost:5001/api/Registration/"+userName+"/"+pass)
+      .map((response: Response) => <Employee>response.json());
+    //[
+    //  { FirstName: "Test first name 1", LastName: "Test FirstName name", Gender: "Male", Phone: "1111111e", Email: "Email", SecurityQuestion: "What is your Birthdate?", Answer: "Test Answer", Password: "Password", }
+    //  , { FirstName: "Test first name 2", LastName: "Test FirstName name", Gender: "Male", Phone: "1111111e", Email: "Email", SecurityQuestion: "What is your Birthdate?", Answer: "Test Answer", Password: "Password", }
+    //  , { FirstName: "Test first name 3", LastName: "Test FirstName name", Gender: "Male", Phone: "1111111e", Email: "Email", SecurityQuestion: "What is your Birthdate?", Answer: "Test Answer", Password: "Password", }
+    //]
+  }
+  GetRegistrationbyId(id:string):Observable <Employee>  {
+    return  this._http.get("https://localhost:5001/api/Registration/"+id)
       .map((response: Response) => <Employee>response.json());
     //[
     //  { FirstName: "Test first name 1", LastName: "Test FirstName name", Gender: "Male", Phone: "1111111e", Email: "Email", SecurityQuestion: "What is your Birthdate?", Answer: "Test Answer", Password: "Password", }
