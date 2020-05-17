@@ -5,6 +5,5 @@ export interface IEmployee {
   userName: string;
   password: string;
   phoneNumber: string;
-  emailId: string;
-  
+  emailId: string;  
 }
